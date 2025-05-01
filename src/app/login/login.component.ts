@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 })
 export class LoginComponent {
     variable: string = "hello";  
+    
 
     constructor() {
         console.log(this.variable); 
