@@ -1,9 +1,15 @@
-import { Component } from "@angular/core"
+import { Component } from "@angular/core";
+
 @Component({
-
-    selector:'app-login',
-    templateUrl:'login.component.html',
-    styleUrl:'login.component.css'
-
+    standalone:true,
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'] 
 })
-export class Componentlogin{};
+export class LoginComponent {
+    variable: string = "hello";  
+
+    constructor() {
+        console.log(this.variable); 
+    }
+}
