@@ -1,1 +1,9 @@
-<h1>{{variable}}</h1>
+<!-- <h1 *ngIf="isLoggedIn">{{variable}}</h1> -->
+@if(isLoggedIn){
+
+    <h1>{{variable}}</h1>
+  
+}
+@if(!isLoggedIn){
+    <h2>Please Login!</h2>
+    }

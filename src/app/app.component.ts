@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-//import { Componentlogin } from './login/login.component';
+import { NgIf } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet,NgIf,LoginComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
   title = 'web_market';
+  
 }
