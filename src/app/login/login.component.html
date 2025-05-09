@@ -1,9 +1,33 @@
-<!-- <h1 *ngIf="isLoggedIn">{{variable}}</h1> -->
-@if(isLoggedIn){
+ <h1 *ngIf="isLoggedIn">{{variable}}</h1> 
+<h1 *ngIf="!isLoggedIn">Please Login!</h1> 
+
+ @if(isLoggedIn){
 
     <h1>{{variable}}</h1>
   
 }
-@if(!isLoggedIn){
+@else{
     <h2>Please Login!</h2>
+    } 
+
+ <h1 *ngIf="isLoggedStatus === 'success'">Success</h1>
+<h1 *ngIf="isLoggedStatus !== 'success'">Please Login!</h1>
+
+ @if(isLoggedStatus === 'success'){
+    <h1>Success</h1>}
+    @else {
+        <h2>Please Login!</h2>
     }
+
+
+    <h1 *ngIf="marks >= 10">marks grater than</h1> 
+    <h1 *ngIf="marks < 10">marks less than</h1> 
+
+<button (click)="toggle()">Toggle Login</button>
+
+@if(marks >= 10){
+    <h1 >marks grater than</h1> 
+}
+@else {
+    <h1>marks less than!</h1>
+} 

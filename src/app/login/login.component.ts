@@ -10,6 +10,16 @@ import { NgIf } from '@angular/common';
 export class LoginComponent {
     variable: string = "hello";  
     
-    isLoggedIn: boolean = true;
+    isLoggedIn: boolean =  false;
+    
+    isLoggedStatus: string = "success";
+
+    marks: number = 1;
+
+
+    toggle(){
+
+        this.isLoggedIn = !this.isLoggedIn;
+    }
 
 }
